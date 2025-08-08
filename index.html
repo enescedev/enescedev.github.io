@@ -18,19 +18,21 @@
 </head>
 <body class="dark">
   <a href="#terminal" class="skip-link">İçeriğe geç</a>
-  <div class="terminal" id="terminal" role="region" aria-label="Terminal penceresi">
-    <div class="terminal-header">
-      <div class="buttons">
-        <span class="btn close" aria-hidden="true"></span>
-        <span class="btn min" aria-hidden="true"></span>
-        <span class="btn max" aria-hidden="true"></span>
+  <div class="terminal-root">
+    <div class="terminal-window" id="terminal" role="region" aria-label="Terminal penceresi">
+      <div class="terminal-header">
+        <div class="buttons">
+          <span class="btn close" aria-hidden="true"></span>
+          <span class="btn min" aria-hidden="true"></span>
+          <span class="btn max" aria-hidden="true"></span>
+        </div>
+        <div class="title">selimenescevik@portfolio</div>
       </div>
-      <div class="title">selimenescevik@portfolio</div>
-    </div>
-    <div id="output" class="output" aria-live="polite"></div>
-    <div class="input-line">
-      <span class="prompt">enescedev@portfolio:~$ </span>
-      <input type="text" id="cmd" autocomplete="off" aria-label="Komut satırı" />
+      <div class="terminal-body" id="terminalOutput" aria-live="polite"></div>
+      <div class="terminal-input">
+        <span class="prompt">enescedev@portfolio:~$</span>
+        <input id="cmdInput" autocomplete="off" aria-label="Command input" />
+      </div>
     </div>
   </div>
   <noscript>Bu site JavaScript gerektirir.</noscript>

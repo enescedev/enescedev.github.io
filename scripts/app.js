@@ -1,16 +1,54 @@
 const PROMPT = 'enescedev@portfolio:~$';
-const cmdInput = document.getElementById('cmd');
-const output = document.getElementById('output');
+const cmdInput = document.getElementById('cmdInput');
+const output = document.getElementById('terminalOutput');
 let history = [];
 let histPos = 0;
 let profile = {};
+
+function printBlock(lines) {
+  output.innerHTML += lines.join('<br>') + '<br>';
+  output.scrollTop = output.scrollHeight;
+}
+
+const tips = [
+  "↑/↓ ile komut geçmişi",
+  "`theme` ile tema değiştir",
+  "`open github` ile GitHub’ı aç",
+  "`download-cv` ile CV indir",
+  "`projects` sonra `projects <ad>` ile detaylar"
+];
+
+function greetingByHour(h) {
+  if (h < 5) return "İyi geceler";
+  if (h < 12) return "Günaydın";
+  if (h < 18) return "İyi günler";
+  return "İyi akşamlar";
+}
+
+function renderMotd() {
+  const now = new Date();
+  const tip = tips[Math.floor(Math.random() * tips.length)];
+  const greet = greetingByHour(now.getHours());
+  printBlock([
+    "  ____      _        ",
+    " |  _ \\ ___| |_ __ _ ",
+    " | |_) / _ \\ __/ _` |",
+    "Welcome 👋 — type `help` to begin.",
+    "",
+    `${greet}! Ben Selim Enes Çevik — Platform & Cloud-Native (OpenShift/K8s, Ceph, S3, CI/CD, Ansible).`,
+    "Şu an Türk Telekom’da Ceph Team Lead.",
+    "",
+    "Sık kullanılanlar: `about`, `projects`, `links`",
+    `İpucu: ${tip}`
+  ]);
+}
 
 fetch('data/profile.json')
   .then(r => r.json())
   .then(j => { profile = j; init(); });
 
 function init() {
-  typeOutput('Welcome 👋 — type help to begin.\n');
+  renderMotd();
   handleHash();
 }
 
@@ -101,6 +139,9 @@ const commands = {
   theme() {
     document.body.classList.toggle('light');
   },
+  motd() {
+    renderMotd();
+  },
   'download-cv'() {
     window.open('assets/cv/Selim_Enes_Cevik_CV_2025.pdf', '_blank');
   },
@@ -162,8 +203,8 @@ cmdInput.addEventListener('keydown', e => {
   }
 });
 
-function runCommand(input) {
-  const [cmd, ...args] = input.split(' ').filter(Boolean);
+function runCommand(line) {
+  const [cmd, ...args] = line.split(' ').filter(Boolean);
   if (!cmd) return;
   const fn = commands[cmd];
   if (fn) {
@@ -184,3 +225,19 @@ output.addEventListener('click', e => {
 });
 
 window.addEventListener('hashchange', handleHash);
+
+const input = document.getElementById('cmdInput');
+
+function focusCmd() {
+  if (!input) return;
+  if (document.visibilityState === 'visible') input.focus();
+}
+
+document.addEventListener('click', (e) => {
+  const tag = (e.target.closest('a, button, [data-no-focus]'));
+  if (tag) return;
+  focusCmd();
+});
+
+window.addEventListener('load', focusCmd);
+document.addEventListener('visibilitychange', focusCmd);
