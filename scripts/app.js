@@ -87,7 +87,7 @@ function clearScreen() {
 const commands = {
   help() {
     const cmds = Object.keys(commands).join(', ');
-    typeOutput(`Komutlar: ${cmds}\n`);
+    typeOutput(`Commands: ${cmds}\n`);
   },
   about() {
     typeOutput(profile.about + '\n');
@@ -115,7 +115,7 @@ const commands = {
       if (proj.url) out += `Bağlantı: <a href="${proj.url}" target="_blank">${proj.url}</a>\n`;
       typeOutput(out);
     } else {
-      typeOutput('Proje bulunamadı\n');
+      typeOutput('Project not found\n');
     }
   },
   certs() {
@@ -131,7 +131,7 @@ const commands = {
     typeOutput(out + '\n');
   },
   contact() {
-    typeOutput(`E-posta: <a href="mailto:${profile.contact.email}">${profile.contact.email}</a>\nPGP yoksa düz mail.\nLinkedIn: <a href="${profile.links.linkedin}" target="_blank">profil</a>\n`);
+    typeOutput(`E-mail: <a href="mailto:${profile.contact.email}">${profile.contact.email}</a>\nPGP yoksa düz mail.\nLinkedIn: <a href="${profile.links.linkedin}" target="_blank">profil</a>\n`);
   },
   clear() {
     clearScreen();
@@ -155,7 +155,7 @@ const commands = {
     if (url) {
       window.open(url, '_blank');
     } else {
-      typeOutput('Bağlantı bulunamadı\n');
+      typeOutput('Connection not found\n');
     }
   }
 };
@@ -210,7 +210,7 @@ function runCommand(line) {
   if (fn) {
     fn(args);
   } else {
-    typeOutput(`Komut bulunamadı: ${cmd}\nhelp yazınız.\n`);
+    typeOutput(`Command not found: ${cmd}\nhelp .\n`);
   }
 }
 

@@ -1,95 +1,115 @@
 {
-  "about": "Platform & Cloud-Native mühendisi. OpenShift/Kubernetes, Ceph (RGW/S3, RBD), CI/CD (GitLab CI, Jenkins, ArgoCD), otomasyon (Ansible/AWX), gözlemlenebilirlik ve S3 tabanlı envanter/operasyon araçları.\nAI-destekli otomasyon: Ollama/Llama, n8n, toplantı-asistanı ve terminal-ajan deneyleri.\nŞu an Türk Telekom’da Ceph Team Lead; önce Halkbank ve Etiya deneyimi.",
+  "about": "Cloud Platform & DevOps Engineer with strong expertise in OpenShift/Kubernetes administration, Red Hat Ceph (RGW/S3, RBD), and enterprise-scale cloud operations. Skilled in PostgreSQL and MongoDB cluster management, CI/CD process automation (Jenkins, ArgoCD, GitLab CI), and Linux system administration. Experienced in designing and optimizing storage systems, implementing infrastructure automation with Ansible/AWX, and developing S3-based inventory and operational tools. Passionate about AI-powered automation, including AI agents, model deployment, and integration with Ollama, OpenDataHub, and OpenWebUI. Currently serving as Ceph Team Lead at Türk Telekom, with prior roles at Halkbank and Etiya.",
+  
   "skills": [
-    "Kubernetes/OpenShift, Docker, Linux (RHEL/Ubuntu)",
-    "Ceph (RGW/S3, RBD; rebalancing, CRUSH,), S3 tools",
-    "CI/CD: GitLab CI, Jenkins, ArgoCD",
-    "Infra Otomasyon: Ansible/AWX, Helm",
-    "Code/Stack: Go, React, Python",
-    "AI/ML Ops: Ollama, OpenDataHub, OpenWebUI, CUDA",
-    "DB: PostgreSQL, MongoDB (HA, cluster ops)",
-    "Observability: Prometheus/Grafana, logging"
+    "Operating Systems: Linux (RHEL, Ubuntu), Windows Server",
+    "Container Orchestration: OpenShift, Docker",
+    "Storage: Red Hat Ceph, IBM Ceph, Object Gateway S3",
+    "Databases: PostgreSQL, MongoDB (Cluster Management & Operations, High Availability)",
+    "CI/CD & Automation: Jenkins, ArgoCD, Ansible, GitLab CI/CD",
+    "Programming & Development: React, Go, Python (Model Training & AI Integration)",
+    "AI/ML Ops: NVIDIA CUDA, Ollama, OpenDataHub, OpenWebUI (Model Deployment & Fine-Tuning)",
+    "Observability: Prometheus, Grafana, Centralized Logging",
+    "Networking: Linux system administration and network configuration"
   ],
+
   "experience": [
     {
       "company": "Türk Telekom",
       "role": "Cloud Platforms / Ceph Team Lead",
-      "years": "2022–…",
+      "years": "Dec 2022 – Present",
       "details": [
-        "Ceph RGW/S3 ve RBD operasyonları, kapasite planlama, rebalancing ve otomasyon",
-        "OpenShift platform yönetimi; CI/CD; DevOps"
+        "Leading operations of enterprise-grade Ceph RGW/S3 and RBD environments, including capacity planning, data rebalancing, and automation.",
+        "Administering and operating OpenShift platforms, managing CI/CD pipelines, and ensuring high availability.",
+        "Developed 'PaaS Envanter', a React and Go-based S3 inventory management application for operational efficiency."
       ]
     },
     {
       "company": "Halkbank",
       "role": "IT Business Assistant",
-      "years": "2021–2022",
+      "years": "Dec 2021 – Dec 2022",
       "details": [
-        "Altyapı süreç analizi, değişiklik/CAB"
+        "Administered OpenShift platform operations and PostgreSQL/MongoDB databases.",
+        "Managed CI/CD processes using Jenkins and ArgoCD.",
+        "Performed Linux system administration and network configuration.",
+        "Analyzed and resolved technical problems, and supported CAB processes for IT infrastructure."
       ]
     },
     {
       "company": "Etiya",
       "role": "Application Operations Specialist",
-      "years": "2021",
+      "years": "Aug 2021 – Dec 2021",
       "details": [
-        "Uygulama operasyonları, izleme, hata çözümü"
+        "Managed application operations, monitoring, and troubleshooting.",
+        "Contributed to improving system stability and incident resolution processes."
       ]
     }
   ],
+
   "projects": [
     {
       "id": "envanter",
       "name": "PaaS Envanter",
-      "desc": "S3 tabanlı envanter görüntüleme/düzenleme aracı; klasör gezgini, upload, presigned-URL, breadcrumb, tablo filtreleme.",
-      "tech": ["React", "Go"],
-      "url": ""
+      "desc": "Enterprise-grade S3-based inventory management web app with folder navigation, file uploads, presigned URL support, breadcrumbs, and table filtering.",
+      "tech": ["React", "Go"]
     },
     {
       "id": "webterm",
-      "name": "Web Terminal + AI Ajan",
-      "desc": "xterm.js benzeri UI; ‘ai’ ön ekiyle doğal dil komutları → SSH/komut akışı; arka planda Ollama/GPT seçilebilir mimari.",
-      "tech": [],
-      "url": ""
+      "name": "Web Terminal + AI Agent",
+      "desc": "xterm.js-based web terminal supporting natural language commands prefixed with 'ai', executing SSH commands with hybrid Ollama/GPT architecture.",
+      "tech": ["JavaScript", "xterm.js", "Go", "Ollama/GPT"]
     },
     {
       "id": "awx",
       "name": "Ceph Ops AWX Playbooks",
-      "desc": "Şifre rotasyonu, RBD snapshot/flatten/temizlik, multisite replikasyon görevleri.",
-      "tech": ["Ansible", "AWX"],
-      "url": ""
+      "desc": "Automated Ceph administration with playbooks for password rotation, RBD snapshot/flatten/cleanup, and multisite replication.",
+      "tech": ["Ansible", "AWX"]
     },
     {
       "id": "n8n",
-      "name": "n8n Portföy Otomasyonu",
-      "desc": "Google Sheets + Gemini/LLM ile günlük finans özeti & “Dünden Bugüne” fark raporu e-posta.",
-      "tech": ["n8n", "Gemini", "Google Sheets"],
-      "url": ""
+      "name": "n8n Portfolio Automation",
+      "desc": "Automated financial reporting using Google Sheets and Gemini/LLM to generate daily portfolio summaries with day-over-day change analysis.",
+      "tech": ["n8n", "Gemini", "Google Sheets"]
     },
     {
       "id": "s3ui",
       "name": "S3 Bucket Manager UI",
-      "desc": "RGW/MinIO için klasör gezinimi, upload/silme, breadcrumb yol takibi.",
-      "tech": ["JavaScript"],
-      "url": ""
+      "desc": "Web interface for RGW/MinIO allowing folder navigation, file upload/deletion, and breadcrumb-based path tracking.",
+      "tech": ["JavaScript"]
     }
   ],
+
   "certs": [
-    "Red Hat RH124",
-    "DO280 (OpenShift Admin II)",
-    "DO288 (OpenShift Dev II)",
-    "RH294 (Ansible)",
+    "Red Hat System Administration I (RH124)",
+    "Red Hat OpenShift Developer II (DO288)",
+    "IBM Introduction to Containers, Kubernetes, and OpenShift V2",
+    "Red Hat OpenShift Administration II (DO280)",
+    "Ansible for Automation (RH294)",
     "ITIL Foundation"
   ],
+
+  "education": [
+    {
+      "institution": "Muğla Sıtkı Koçman University",
+      "degree": "B.Sc. Information Systems Engineering",
+      "years": "2015 – 2021"
+    }
+  ],
+
   "writing": {
     "medium": "https://medium.com/@selimenesc"
   },
+
   "links": {
     "github": "https://github.com/enescedev",
     "linkedin": "https://www.linkedin.com/in/selimenescevik",
     "medium": "https://medium.com/@selimenesc"
   },
+
   "contact": {
-    "email": "selimenesc@gmail.com"
-  }
+    "email": "selimenesc@gmail.com",
+    "phone": "+90 553 429 88 29"
+  },
+
+  "cv": "assets/cv/Selim_Enes_Cevik_CV_2025.pdf"
 }
