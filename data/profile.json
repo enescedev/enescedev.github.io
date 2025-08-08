@@ -1,0 +1,95 @@
+{
+  "about": "Platform & Cloud-Native mühendisi. OpenShift/Kubernetes, Ceph (RGW/S3, RBD), CI/CD (GitLab CI, Jenkins, ArgoCD), otomasyon (Ansible/AWX), gözlemlenebilirlik ve S3 tabanlı envanter/operasyon araçları.\nAI-destekli otomasyon: Ollama/Llama, n8n, toplantı-asistanı ve terminal-ajan deneyleri.\nŞu an Türk Telekom’da Ceph Team Lead; önce Halkbank ve Etiya deneyimi.",
+  "skills": [
+    "Kubernetes/OpenShift, Docker, Linux (RHEL/Ubuntu)",
+    "Ceph (RGW/S3, RBD; rebalancing, CRUSH,), S3 tools",
+    "CI/CD: GitLab CI, Jenkins, ArgoCD",
+    "Infra Otomasyon: Ansible/AWX, Helm",
+    "Code/Stack: Go, React, Python",
+    "AI/ML Ops: Ollama, OpenDataHub, OpenWebUI, CUDA",
+    "DB: PostgreSQL, MongoDB (HA, cluster ops)",
+    "Observability: Prometheus/Grafana, logging"
+  ],
+  "experience": [
+    {
+      "company": "Türk Telekom",
+      "role": "Cloud Platforms / Ceph Team Lead",
+      "years": "2022–…",
+      "details": [
+        "Ceph RGW/S3 ve RBD operasyonları, kapasite planlama, rebalancing ve otomasyon",
+        "OpenShift platform yönetimi; CI/CD; DevOps"
+      ]
+    },
+    {
+      "company": "Halkbank",
+      "role": "IT Business Assistant",
+      "years": "2021–2022",
+      "details": [
+        "Altyapı süreç analizi, değişiklik/CAB"
+      ]
+    },
+    {
+      "company": "Etiya",
+      "role": "Application Operations Specialist",
+      "years": "2021",
+      "details": [
+        "Uygulama operasyonları, izleme, hata çözümü"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "envanter",
+      "name": "PaaS Envanter",
+      "desc": "S3 tabanlı envanter görüntüleme/düzenleme aracı; klasör gezgini, upload, presigned-URL, breadcrumb, tablo filtreleme.",
+      "tech": ["React", "Go"],
+      "url": ""
+    },
+    {
+      "id": "webterm",
+      "name": "Web Terminal + AI Ajan",
+      "desc": "xterm.js benzeri UI; ‘ai’ ön ekiyle doğal dil komutları → SSH/komut akışı; arka planda Ollama/GPT seçilebilir mimari.",
+      "tech": [],
+      "url": ""
+    },
+    {
+      "id": "awx",
+      "name": "Ceph Ops AWX Playbooks",
+      "desc": "Şifre rotasyonu, RBD snapshot/flatten/temizlik, multisite replikasyon görevleri.",
+      "tech": ["Ansible", "AWX"],
+      "url": ""
+    },
+    {
+      "id": "n8n",
+      "name": "n8n Portföy Otomasyonu",
+      "desc": "Google Sheets + Gemini/LLM ile günlük finans özeti & “Dünden Bugüne” fark raporu e-posta.",
+      "tech": ["n8n", "Gemini", "Google Sheets"],
+      "url": ""
+    },
+    {
+      "id": "s3ui",
+      "name": "S3 Bucket Manager UI",
+      "desc": "RGW/MinIO için klasör gezinimi, upload/silme, breadcrumb yol takibi.",
+      "tech": ["JavaScript"],
+      "url": ""
+    }
+  ],
+  "certs": [
+    "Red Hat RH124",
+    "DO280 (OpenShift Admin II)",
+    "DO288 (OpenShift Dev II)",
+    "RH294 (Ansible)",
+    "ITIL Foundation"
+  ],
+  "writing": {
+    "medium": "https://medium.com/@selimenesc"
+  },
+  "links": {
+    "github": "https://github.com/enescedev",
+    "linkedin": "https://www.linkedin.com/in/selimenescevik",
+    "medium": "https://medium.com/@selimenesc"
+  },
+  "contact": {
+    "email": "selimenesc@gmail.com"
+  }
+}

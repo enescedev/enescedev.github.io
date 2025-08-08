@@ -1,0 +1,127 @@
+:root {
+  --bg: #000;
+  --fg: #33ff33;
+  --prompt: #33ff33;
+  --cursor: #33ff33;
+  --link: #33ff33;
+  --link-hover: #fff;
+}
+body.light {
+  --fg: #ffbf00;
+  --prompt: #ffbf00;
+  --cursor: #ffbf00;
+  --link: #ffbf00;
+  --link-hover: #fff;
+  --bg: #000;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Fira Code", monospace;
+  margin: 0;
+}
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #222;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 8px;
+}
+.terminal {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.terminal-header {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 4px 8px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.buttons {
+  display: flex;
+  gap: 4px;
+}
+.btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.btn.close { background: #ff5f56; }
+.btn.min { background: #ffbd2e; }
+.btn.max { background: #27c93f; }
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: var(--fg);
+}
+.output {
+  background: #000;
+  min-height: 60vh;
+  padding: 10px;
+  overflow-y: auto;
+  border-left: 1px solid #222;
+  border-right: 1px solid #222;
+}
+.input-line {
+  display: flex;
+  align-items: center;
+  background: #000;
+  padding: 8px 10px;
+  border-left: 1px solid #222;
+  border-right: 1px solid #222;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.prompt {
+  color: var(--prompt);
+  margin-right: 4px;
+}
+#cmd {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 16px;
+  caret-color: var(--cursor);
+}
+#cmd:focus {
+  outline: 1px solid var(--fg);
+}
+a {
+  color: var(--link);
+  text-decoration: underline;
+  position: relative;
+}
+a:hover {
+  animation: wiggle 0.3s ease-in-out;
+  color: var(--link-hover);
+}
+@keyframes wiggle {
+  0%,100% { transform: translateX(0); }
+  50% { transform: translateX(2px); }
+}
+.copy-btn {
+  margin-left: 8px;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .output {
+    min-height: 50vh;
+    font-size: 14px;
+  }
+  #cmd {
+    font-size: 14px;
+  }
+}

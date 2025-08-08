@@ -1,1 +1,39 @@
-Merhaba Dünya
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selim Enes Çevik — Portfolio</title>
+  <meta name="description" content="Terminal tabanlı portföy - Platform & Cloud-Native mühendis" />
+  <meta property="og:title" content="Selim Enes Çevik — Portfolio" />
+  <meta property="og:description" content="Terminal tabanlı portföy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://enescedev.github.io/" />
+  <meta property="og:image" content="assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script defer src="scripts/app.js"></script>
+</head>
+<body class="dark">
+  <a href="#terminal" class="skip-link">İçeriğe geç</a>
+  <div class="terminal" id="terminal" role="region" aria-label="Terminal penceresi">
+    <div class="terminal-header">
+      <div class="buttons">
+        <span class="btn close" aria-hidden="true"></span>
+        <span class="btn min" aria-hidden="true"></span>
+        <span class="btn max" aria-hidden="true"></span>
+      </div>
+      <div class="title">selimenescevik@portfolio</div>
+    </div>
+    <div id="output" class="output" aria-live="polite"></div>
+    <div class="input-line">
+      <span class="prompt">enescedev@portfolio:~$ </span>
+      <input type="text" id="cmd" autocomplete="off" aria-label="Komut satırı" />
+    </div>
+  </div>
+  <noscript>Bu site JavaScript gerektirir.</noscript>
+  <!-- analytics placeholder: <script src="https://example.com/analytics.js" data-token="TOKEN"></script> -->
+</body>
+</html>
