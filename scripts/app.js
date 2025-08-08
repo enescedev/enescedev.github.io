@@ -224,7 +224,7 @@ const commands = {
     renderMotd();
   },
   'download-cv'() {
-    const url = profile.cv || 'assets/cv/Selim_Enes_Cevik_CV_2025.pdf';
+    const url = profile.cv || 'assets/cv/Selim_Enes_Cevik_CV.pdf';
     window.open(url, '_blank');
   },
   open(args) {
