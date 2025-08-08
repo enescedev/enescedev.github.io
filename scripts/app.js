@@ -39,7 +39,6 @@ const tips = [
   "Toggle theme with `theme`.",
   "Open links with `open github|linkedin|medium`.",
   "Download your CV via `download-cv`.",
-  "Try `projects` and then `projects <id>` for details."
 ];
 
 function greetingByHour(h) {
@@ -87,12 +86,12 @@ function renderMotd() {
     "",
     `${greet}! I'm Selim Enes Çevik — Cloud Platform & DevOps Engineer".`,
     "",
-    "Popular: \u0060about\u0060, \u0060projects\u0060, \u0060links\u0060",
+    "Popular: \u0060about\u0060, \u0060experience\u0060, \u0060links\u0060",
     `Tip: ${tip}`
   ]);
 }
 
-/* ---------- Matrix intro (code rain) ---------- */
+/* ---------- Matrix intro ---------- */
 
 function startMatrixRain(durationMs = 3500) {
   const canvas = document.createElement('canvas');
@@ -135,7 +134,6 @@ function startMatrixRain(durationMs = 3500) {
       ctx.fillText(text, i * 14, drops[i] * 14);
       drops[i]++;
 
-      // random reset
       if (drops[i] * 14 > h && Math.random() > 0.975) {
         drops[i] = 0;
       }
@@ -205,30 +203,6 @@ const commands = {
     });
     typeOutput(out || 'No experience data\n');
   },
-  projects(args) {
-    const list = profile.projects || [];
-    if (!args.length) {
-      typeOutput(list.map(p => `${p.id} — ${p.name}`).join('\n') + '\n');
-      return;
-    }
-    const proj = list.find(p => p.id === args[0]);
-    if (proj) {
-      let out = `${proj.name}\n${proj.desc}\n`;
-      if (proj.tech && proj.tech.length) out += `Tech: ${proj.tech.join(', ')}\n`;
-      if (proj.url) out += `Link: <a href="${proj.url}" target="_blank">${proj.url}</a>\n`;
-      typeOutput(out);
-    } else {
-      typeOutput('Project not found\n');
-    }
-  },
-  certs() {
-    const text = (profile.certs || []).join('\n');
-    output.innerHTML += `<div><button class="copy-btn" data-copy="${text.replace(/"/g,'&quot;')}">copy</button><pre>${text}</pre></div>`;
-  },
-  writing() {
-    const m = profile?.writing?.medium;
-    typeOutput(m ? `Medium: <a href="${m}" target="_blank">${m}</a>\n` : 'No writing link\n');
-  },
   links() {
     const links = profile.links || {};
     const out = Object.entries(links).map(([k,v]) => `${k}: <a href="${v}" target="_blank">${v}</a>`).join('\n');
@@ -267,7 +241,6 @@ const commands = {
     }
   },
   ascii() {
-    // Optional: reprint Mandalorian ASCII any time
     printBlock(MANDO_ASCII);
   }
 };
@@ -317,7 +290,7 @@ cmdInput.addEventListener('keydown', e => {
   }
 });
 
-/* ---------- click-to-focus + copy buttons ---------- */
+/* ---------- focus ---------- */
 
 function focusCmd() {
   if (!cmdInput) return;

@@ -5,9 +5,6 @@
 - `about`
 - `skills`
 - `experience`
-- `projects [ad]`
-- `certs`
-- `writing`
 - `links`
 - `contact`
 - `clear`

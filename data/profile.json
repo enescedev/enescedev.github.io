@@ -46,48 +46,6 @@
     }
   ],
 
-  "projects": [
-    {
-      "id": "envanter",
-      "name": "PaaS Envanter",
-      "desc": "Enterprise-grade S3-based inventory management web app with folder navigation, file uploads, presigned URL support, breadcrumbs, and table filtering.",
-      "tech": ["React", "Go"]
-    },
-    {
-      "id": "webterm",
-      "name": "Web Terminal + AI Agent",
-      "desc": "xterm.js-based web terminal supporting natural language commands prefixed with 'ai', executing SSH commands with hybrid Ollama/GPT architecture.",
-      "tech": ["JavaScript", "xterm.js", "Go", "Ollama/GPT"]
-    },
-    {
-      "id": "awx",
-      "name": "Ceph Ops AWX Playbooks",
-      "desc": "Automated Ceph administration with playbooks for password rotation, RBD snapshot/flatten/cleanup, and multisite replication.",
-      "tech": ["Ansible", "AWX"]
-    },
-    {
-      "id": "n8n",
-      "name": "n8n Portfolio Automation",
-      "desc": "Automated financial reporting using Google Sheets and Gemini/LLM to generate daily portfolio summaries with day-over-day change analysis.",
-      "tech": ["n8n", "Gemini", "Google Sheets"]
-    },
-    {
-      "id": "s3ui",
-      "name": "S3 Bucket Manager UI",
-      "desc": "Web interface for RGW/MinIO allowing folder navigation, file upload/deletion, and breadcrumb-based path tracking.",
-      "tech": ["JavaScript"]
-    }
-  ],
-
-  "certs": [
-    "Red Hat System Administration I (RH124)",
-    "Red Hat OpenShift Developer II (DO288)",
-    "IBM Introduction to Containers, Kubernetes, and OpenShift V2",
-    "Red Hat OpenShift Administration II (DO280)",
-    "Ansible for Automation (RH294)",
-    "ITIL Foundation"
-  ],
-
   "education": [
     {
       "institution": "Muğla Sıtkı Koçman University",
@@ -95,10 +53,6 @@
       "years": "2015 – 2021"
     }
   ],
-
-  "writing": {
-    "medium": "https://medium.com/@selimenesc"
-  },
 
   "links": {
     "github": "https://github.com/enescedev",
