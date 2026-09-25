@@ -1,4 +1,6 @@
 {
+  "name": "Selim Enes Çevik",
+  "role": "Cloud Platform & DevOps Engineer",
   "about": "Cloud Platform & DevOps Engineer with strong expertise in OpenShift/Kubernetes administration, Red Hat Ceph (RGW/S3, RBD), and enterprise-scale cloud operations. Skilled in PostgreSQL and MongoDB cluster management, CI/CD process automation (Jenkins, ArgoCD, GitLab CI), and Linux system administration. Experienced in designing and optimizing storage systems, implementing infrastructure automation with Ansible/AWX, and developing S3-based inventory and operational tools. Passionate about AI-powered automation, including AI agents, model deployment, and integration with Ollama, OpenDataHub, and OpenWebUI. Currently serving as Ceph Team Lead at Türk Telekom, with prior roles at Halkbank and Etiya.",
   
   "skills": [

@@ -3,39 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Selim Enes Çevik — Portfolio</title>
-  <meta name="description" content="Terminal tabanlı portföy - Platform & Cloud-Native mühendis" />
-  <meta property="og:title" content="Selim Enes Çevik — Portfolio" />
-  <meta property="og:description" content="Terminal tabanlı portföy" />
+  <title>Mandalorian Terminal — Selim Enes Çevik</title>
+  <meta name="description" content="Mandalorian temalı interaktif komut terminali — Selim Enes Çevik, Cloud Platform & DevOps Engineer" />
+  <meta property="og:title" content="Mandalorian Terminal — Selim Enes Çevik" />
+  <meta property="og:description" content="Interaktif komut terminali portföyü" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://enescedev.github.io/" />
-  <meta property="og:image" content="assets/og.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="styles/main.css" />
   <script defer src="scripts/app.js"></script>
 </head>
 <body class="dark">
   <a href="#terminal" class="skip-link">İçeriğe geç</a>
   <div class="terminal-root">
-    <div class="terminal-window" id="terminal" role="region" aria-label="Terminal penceresi">
+    <div class="terminal-window" id="terminal" role="region" aria-label="Komut terminali">
       <div class="terminal-header">
         <div class="buttons">
           <span class="btn close" aria-hidden="true"></span>
           <span class="btn min" aria-hidden="true"></span>
           <span class="btn max" aria-hidden="true"></span>
         </div>
-        <div class="title">selimenescevik@portfolio</div>
+        <div class="title">MANDALORIAN OS // PORTFOLIO TERMINAL</div>
+        <div class="header-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">SYSTEM ONLINE</span>
+        </div>
       </div>
       <div class="terminal-body" id="terminalOutput" aria-live="polite"></div>
       <div class="terminal-input">
-        <span class="prompt">enescedev@portfolio:~$</span>
-        <input id="cmdInput" autocomplete="off" aria-label="Command input" />
+        <span class="prompt">operator@mando:~$</span>
+        <input id="cmdInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Komut girişi" />
+      </div>
+      <div class="mobile-keys" role="toolbar" aria-label="Terminal kısayolları">
+        <button type="button" class="mobile-key" data-key="Tab">TAB</button>
+        <button type="button" class="mobile-key" data-key="ArrowUp">↑</button>
+        <button type="button" class="mobile-key" data-key="ArrowDown">↓</button>
+        <button type="button" class="mobile-key" data-key="Escape">ESC</button>
+        <button type="button" class="mobile-key" data-key="ctrl-l">CTRL+L</button>
+        <button type="button" class="mobile-key" data-key="Enter">ENTER</button>
+      </div>
+      <div class="status-bar">
+        <span class="chip accent">SESSION: LOCAL</span>
+        <span class="chip">MODE: PORTFOLIO</span>
+        <span class="chip">INPUT: READY</span>
       </div>
     </div>
   </div>
   <noscript>Bu site JavaScript gerektirir.</noscript>
-  <!-- analytics placeholder: <script src="https://example.com/analytics.js" data-token="TOKEN"></script> -->
 </body>
 </html>

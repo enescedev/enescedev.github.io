@@ -2,11 +2,34 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Target Not Found</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    .err-shell {
+      max-width: 640px;
+      margin: 15vh auto 0;
+      padding: 20px 24px;
+      background: var(--bg-panel);
+      border: var(--border);
+      border-radius: var(--radius);
+    }
+    .err-shell h1 { color: var(--err); font-size: 15px; letter-spacing: 0.08em; margin: 0 0 8px; }
+    .err-shell a { color: var(--link); }
+  </style>
   <script>
-    const path = window.location.pathname.replace(/^\//, '');
-    window.location.replace('/#' + path);
+    // Preserve existing hash-routing redirect: unknown static paths on
+    // GitHub Pages get sent back to the SPA hash router.
+    var path = window.location.pathname.replace(/^\//, '');
+    if (path) window.location.replace('/#' + path);
   </script>
 </head>
-<body></body>
+<body class="dark">
+  <div class="err-shell">
+    <div class="out-dim">&gt; cd /requested-path</div>
+    <h1>ERROR 404 — TARGET NOT FOUND</h1>
+    <p class="out-dim">Aranan rota sistemde bulunamadı.</p>
+    <p>$ <a href="/">help</a> — ana terminale dön</p>
+  </div>
+</body>
 </html>
